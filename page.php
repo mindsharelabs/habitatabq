@@ -9,6 +9,4 @@ if(have_posts()) :
 endif;
 echo '</div>';
 
-
-
 get_footer();
