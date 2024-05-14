@@ -1,0 +1,2 @@
+<?php
+mindblank_nav();

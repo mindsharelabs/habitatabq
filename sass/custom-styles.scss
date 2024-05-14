@@ -1,0 +1,211 @@
+//
+// LAYOUTS
+// Place all of your custom styles in here. This stylesheet is loaded last,
+// and takes precedence over all others.
+//
+// --------------------------------------------------
+
+body {
+  opacity: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: $dark;
+  -moz-osx-font-smoothing: grayscale; // enable font-smoothing for browsers that support it
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-transition: opacity 250ms ease-out;
+  -moz-transition: opacity 250ms ease-out;
+  -ms-transition: opacity 250ms ease-out;
+  -o-transition: opacity 250ms ease-out;
+  transition: opacity 250ms ease-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+
+}
+
+a {
+  color: darken($primary, 20%);
+  text-decoration: none;
+  @include transition(400ms);
+  &:hover {
+    color: darken($primary, 30%); 
+    text-decoration: underline;
+    @include transition(100ms);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+ 
+}
+body.home {
+ 
+}
+strong {
+  font-weight: 600; 
+}
+
+p + h1 {
+  margin-top: 2em;
+}
+p + h2 {
+  margin-top: 1.8em;
+}
+p + h3 {
+  margin-top: 1.4em;
+}
+p + h4 {
+  margin-top: 1em;
+}
+h1,h2 {
+ 
+}
+h1 {
+
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 9px;
+}
+h3 {
+  margin-bottom: 6px;
+}
+h4 {
+  margin-bottom: 3px;
+}
+h5 {
+  margin-bottom: 0px;
+}
+hr {
+  width: 100%;
+}
+
+main {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
+  position: relative;
+  width: 100%;
+}
+
+
+nav {
+ 
+}
+
+body.home {
+  
+}
+
+#mobileMenu {
+  
+}
+#mobileMenuToggle {
+ 
+
+}
+
+
+.front-page {
+ 
+}
+
+
+article {
+  
+}
+
+
+// Footer
+footer.widget-footer {
+ 
+}
+
+/* single post */
+
+.alignleft, img.alignleft {
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.alignright, img.alignright {
+  float: right;
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+}
+
+.aligncenter, img.aligncenter {
+  float: none;
+
+}
+
+.alignnone, img.alignnone {
+  float: none;
+
+}
+p.wp-caption-text {
+  text-align: center;
+  font-size: .9em;
+  margin: 0 0 15px 0;
+}
+
+
+code {
+  color: $gray-800;
+}
+//Responcive Embeds
+.embed-container, .video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+  iframe, object, embed, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Pagination 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  .page-numbers {
+    background: $primary;
+    padding: 5px 10px;
+    margin: 0 2px;
+    color: #fff;
+    text-align: center;
+    flex: 1;
+    font-size: 1.4em;
+    font-weight: 500;
+    min-width: 30px;
+    white-space: nowrap;
+  }
+  .page-numbers.current { 
+    background: $light;  
+    color: $dark;
+  }
+  .page-numbers:first-child {
+    margin-left: 0;
+  }
+  .page-numbers:last-child {
+    margin-right: 0;
+  }
+}
