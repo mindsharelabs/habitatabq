@@ -99,8 +99,126 @@ main {
 
 
 nav {
+  &.header-menu {
+    display: flex;
+    justify-content: flex-end;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0 10px;
+        a {
+          text-transform: uppercase;
+          font-size: .8em;
+          color: $primary;
+          text-decoration: none;
+          font-weight: 500;
+          @include transition(250ms);
+          &:hover {
+            color: darken($primary, 20%);
+            @include transition(50ms);
+          }
+        }
+      }
+    
+    }
+  }
+  &.main-menu {
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0;   
+        position: relative;
+        & > a {
+          display: block;
+          padding: 4px 10px;
+          background-color: $primary;
+          text-transform: uppercase;
+          font-size: .8em;
+          color: $light;
+          text-decoration: none;
+          font-weight: 500;
+          @include transition(250ms);
+          &:hover {
+            background-color: darken($primary, 20%);
+            @include transition(50ms);
+          }
+        }
+        & > ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          line-height: 1em;
+          white-space: nowrap;
+          
+          li {
+            & > a {
+              position: relative;
+              padding: 10px 20px;
+              display: block;
+              background-color: $light;
+              color: $dark;
+              font-size: .8em;
+              text-transform: uppercase;
+              text-decoration: none;
+              font-weight: 500;
+              @include transition(250ms);
+              &:hover {
+                background-color: darken($light, 20%);
+                @include transition(50ms);
+              }
+              
+            }
+            
+          }
+          
+          
+        }
+        &:hover {
+          & > ul {
+            display: block;
+          }
+        }
+        &.menu_item_has_children, &.page_item_has_children {
+          & > a {
+            position: relative;
+            &:after {
+              font-family: "Font Awesome 6 Pro";
+              font-weight: 400;
+              content: "\f107";
+              display: none;
   
+              color: $dark;
+              font-style: normal;
+              font-variant: normal;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+            }
+            svg {
+              // position: absolute;
+              top: 15px;
+              margin-left: 10px;
+              // display: none;
+            }
+          }
+          
+        }
+      }
+    
+    }
+  
+  }
 }
+
 
 body.home {
   
