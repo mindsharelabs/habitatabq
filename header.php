@@ -19,5 +19,5 @@
     <body <?php body_class(); ?>>
     <div id="main">
 
-    <?php get_template_part( 'nav/nav', 'main'); ?>
+    <?php get_template_part( 'template-parts/nav/nav', 'main'); ?>
         

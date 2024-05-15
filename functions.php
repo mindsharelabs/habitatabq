@@ -52,21 +52,23 @@ if (function_exists('add_theme_support')) {
 function mind_header_scripts(){
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-      wp_register_script('mindblankscripts-min', get_template_directory_uri() . '/js/scripts.js', array('jquery'), THEME_VERSION, true);
-      wp_enqueue_script('mindblankscripts-min');
+        wp_register_script('bootstrap-min', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), THEME_VERSION, true);
+        wp_enqueue_script('bootstrap-min');
+      
+        wp_register_script('mind-scripts-min', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'bootstrap-min'), THEME_VERSION, true);
+        wp_enqueue_script('mind-scripts-min');
 
-      wp_register_script('fontawesome', 'https://kit.fontawesome.com/5bcc5329ee.js', array(), THEME_VERSION, true);
-      wp_enqueue_script('fontawesome');
-      add_action('wp_head', function() {
-        echo '<link rel="preconnect" href="https://kit-pro.fontawesome.com">';
-      });
-
+        wp_register_script('fontawesome', 'https://kit.fontawesome.com/5bcc5329ee.js', array(), THEME_VERSION, true);
+        wp_enqueue_script('fontawesome');
+        add_action('wp_head', function() {
+            echo '<link rel="preconnect" href="https://kit-pro.fontawesome.com">';
+         });
 
     }
 }
 
 function mind_styles(){
-    wp_register_style('mindblankcssmin', get_template_directory_uri() . '/css/style.css', array(), THEME_VERSION);
+    wp_register_style('mindblankcssmin', get_template_directory_uri() . '/css/styles.css', array(), THEME_VERSION);
     wp_enqueue_style('mindblankcssmin');
 
 
@@ -217,7 +219,20 @@ add_filter( 'get_the_archive_title', 'mindblank_remove_prepend_archives');
 
 
 
+// Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
+function mind_pagination() {
+    global $wp_query;
+    $big = 999999999;
+    echo paginate_links(array(
+        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages,
+        'next_text' => '<i class="fas fa-angle-double-right"></i>',
+        'prev_text' => '<i class="fas fa-angle-double-left"></i>',
 
+    ));
+}
 
 
 /*  Add responsive container to embeds
