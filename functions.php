@@ -277,7 +277,7 @@ function mind_remove_category_rel_from_category_list($thelist){
 add_filter('the_category', 'mind_remove_category_rel_from_category_list');
 
 
-
+ 
 
 // Add page slug to body class, love this - Credit: Starkers Wordpress Theme
 function mind_add_slug_to_body_class( $classes ) {

@@ -5,6 +5,6 @@ echo '<nav class="header-menu">';
 echo '</nav>';
 
 
-echo '<nav class="main-menu">';
+echo '<nav class="main-menu d-none d-md-block">';
     mind_nav('main-menu');
 echo '</nav>';

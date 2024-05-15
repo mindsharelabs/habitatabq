@@ -38,7 +38,6 @@ a {
   text-decoration: none;
   @include transition(400ms);
   &:hover {
-    color: darken($primary, 30%); 
     text-decoration: underline;
     @include transition(100ms);
   }
@@ -99,6 +98,7 @@ main {
 
 
 nav {
+  position: relative;
   &.header-menu {
     display: flex;
     justify-content: flex-end;
@@ -126,6 +126,7 @@ nav {
     }
   }
   &.main-menu {
+    z-index: 1000;
     display: flex;
     justify-content: center;
     background-color: $primary;

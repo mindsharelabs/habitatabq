@@ -20,4 +20,3 @@
     <div id="main">
 
     <?php get_template_part( 'template-parts/nav/nav', 'main'); ?>
-        
