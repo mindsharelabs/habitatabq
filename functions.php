@@ -15,6 +15,32 @@ define('THEME_VERSION', '1.2.5');
 
 
 /*------------------------------------*\
+    Theme Content Support
+\*------------------------------------*/
+
+
+function add_specific_menu_location_atts( $atts, $item, $args ) {
+    // mapi_write_log($args);
+    mapi_write_log($atts);
+    // mapi_write_log($item);
+    // check if the item is in the primary menu
+    if( $args->theme_location == 'header-menu' ) {
+        $type = get_field('menu_item_type', $item);
+            
+        // append icon
+        if( $type == 'icon' ) {
+            $icon = get_field('icon', $item);
+            $item->title = '<i class="fa fa-' . $icon . '"></i>';
+        } elseif( $type == 'button' ) {
+            $button_color = get_field('button_color', $item);
+            $atts['class'] = 'btn btn-' . $button_color;
+        }
+    }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+
+/*------------------------------------*\
     Cusomizer Support
 \*------------------------------------*/
 
@@ -71,10 +97,8 @@ function mind_styles(){
     wp_register_style('mindblankcssmin', get_template_directory_uri() . '/css/styles.css', array(), THEME_VERSION);
     wp_enqueue_style('mindblankcssmin');
 
-
-    wp_register_style('google-fonts-vibes', 'https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap', array(), THEME_VERSION);
-    wp_register_style('google-fonts-open-sans', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,800;1,300;1,500;1,800&display=swap', array(), THEME_VERSION);
-	add_action('wp_head', function() {
+    wp_register_style('google-fonts-arimo', 'https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap', array(), THEME_VERSION);
+    add_action('wp_head', function() {
 		echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
         echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
 	});
@@ -83,8 +107,8 @@ function mind_styles(){
 }
 
 function mind_add_footer_styles() {
-    wp_enqueue_style('google-fonts-vibes');
-    wp_enqueue_style('google-fonts-open-sans');
+    wp_enqueue_style('google-fonts-arimo');
+   
 };
 
 

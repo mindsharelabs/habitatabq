@@ -1,4 +1,4 @@
 <?php
-echo '<nav class="mobile-menu d-none d-md-block">';
+echo '<nav id="mobileMenu" class="mobile-menu">';
     mind_nav('mobile-menu');
 echo '</nav>';

@@ -30,7 +30,6 @@
 			if($(this).parent().hasClass('menu-item-has-children')) {
 				e.preventDefault();
 			}
-
 			$(this).parent().toggleClass('expanded');
 		});
 
