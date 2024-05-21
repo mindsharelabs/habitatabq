@@ -71,6 +71,24 @@ if (function_exists('add_theme_support')) {
 
 }
 
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function mind_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Widgets',
+		'id'            => 'footer_widgets',
+		'before_widget' => '<div class="widget-item col-12 col-md-4">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'mind_widgets_init' );
+
 
 /*------------------------------------*\
     Script and Style Loading
