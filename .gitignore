@@ -216,7 +216,8 @@ wp-content/themes/twenty*/
 *.sql
 *.sqlite
 
-
+##
+.vscode
 
 ## ignore the top level .htaccess file (in case you need a different one for local development)
 /.htaccess

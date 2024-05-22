@@ -23,7 +23,7 @@
                 echo '</div>';
         echo '</div>';
     echo '</div>';
-    
+
     get_template_part( 'template-parts/nav/nav', 'mobile');
 
     echo '<div id="mobileMenuToggle" class="menu-toggle d-flex d-md-none">';

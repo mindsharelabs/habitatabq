@@ -20,9 +20,6 @@ define('THEME_VERSION', '1.2.5');
 
 
 function add_specific_menu_location_atts( $atts, $item, $args ) {
-    // mapi_write_log($args);
-    mapi_write_log($atts);
-    // mapi_write_log($item);
     // check if the item is in the primary menu
     if( $args->theme_location == 'header-menu' ) {
         $type = get_field('menu_item_type', $item);
@@ -59,6 +56,7 @@ if (function_exists('add_theme_support')) {
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
+    add_theme_support( 'custom-spacing' );
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
