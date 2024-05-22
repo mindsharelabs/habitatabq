@@ -142,10 +142,10 @@ function mind_conditional_scripts(){
 
 add_filter( 'script_loader_tag', function ( $tag, $handle, $src ) {
     // the handles of the enqueued scripts we want to async
-    $scripts = array( 'fontawesome');
+    $scripts = array('fontawesome');
 
     if ( in_array( $handle, $scripts ) ) {
-        return '<script type="text/javascript" src="' . $src . '" data-search-pseudo-elements></script>';
+        return '<script type="text/javascript" src="' . $src . '" data-search-pseudo-elements crossorigin="anonymous"></script>';
     }
 
     return $tag;
