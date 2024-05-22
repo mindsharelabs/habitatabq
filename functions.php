@@ -9,7 +9,7 @@ define('THEME_VERSION', '1.2.5');
     External Modules/Files
 \*------------------------------------*/
 
-
+include get_template_directory() . '/inc/acf-blocks.php';
 
 
 
