@@ -18,21 +18,21 @@ include get_template_directory() . '/inc/acf-blocks.php';
     Theme Content Support
 \*------------------------------------*/
 
-
 function add_specific_menu_location_atts( $atts, $item, $args ) {
     // check if the item is in the primary menu
+   
     if( $args->theme_location == 'header-menu' ) {
         $type = get_field('menu_item_type', $item);
-            
         // append icon
         if( $type == 'icon' ) {
             $icon = get_field('icon', $item);
             $item->title = '<i class="fa fa-' . $icon . '"></i>';
-        } elseif( $type == 'button' ) {
+        } elseif( $type[0] == 'button' ) {
             $button_color = get_field('button_color', $item);
-            $atts['class'] = 'btn btn-' . $button_color;
+            $atts['class'] = 'text-white btn btn-' . $button_color;
         }
     }
+    
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );

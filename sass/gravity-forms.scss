@@ -1,0 +1,18 @@
+.gform_wrapper {
+    .gform_heading {
+        text-align: center;
+    }
+
+
+
+    .gform_footer {
+        justify-content: center;
+        margin-bottom: 20px;
+        input.gform_button {
+            @extend .btn;
+            @extend .btn-primary;
+            font-size: 1.1em!important;
+            padding: 12px 24px !important;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <?php
 
 echo '<div class="header-cont">';
-    echo '<div class="header-menu container py-3">';
+    echo '<div class="header-menu container pt-3">';
         echo '<div class="row">';
             echo '<div class="header-logo order-last order-md-first col-12 col-md-6 col-lg-4">';
                 echo '<a href="' . esc_url(home_url('/')) . '">';

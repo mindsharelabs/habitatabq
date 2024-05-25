@@ -1,10 +1,19 @@
 <?php
 get_header();
 if(have_posts()) :
-    $classes = get_post_class('', get_the_ID());
+    $classes = get_post_class( 'container', get_the_ID());
+    echo '<article class="' . implode($classes) . '">';
+    if(get_field('show_header')) :
+        echo '<div class="row">';
+            echo '<div class="col-12">';
+                echo '<h1 class="page-title">' . get_the_title() . '</h1>';
+            echo '</div>';
+        echo '</div>';
+    endif;
     while(have_posts()) : the_post();
         the_content();
     endwhile;
+    echo '</article>';
 else :
     echo '<div class="container">';
         echo '<div class="row">';

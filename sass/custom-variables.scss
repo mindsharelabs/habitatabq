@@ -132,7 +132,7 @@ $body-text-align:           null;
 // $accordion-padding-y:                     1rem ;
 // $accordion-padding-x:                     1.25rem ;
 // $accordion-color:                         var(--#{$prefix}body-color) ;
-$accordion-bg:                               lighten($primary, 40%);
+$accordion-bg:                               lighten($light, 40%);
 // $accordion-border-width:                  var(--#{$prefix}border-width) ;
 // $accordion-border-color:                  var(--#{$prefix}border-color) ;
 // $accordion-border-radius:                 var(--#{$prefix}border-radius) ;
@@ -146,7 +146,7 @@ $accordion-bg:                               lighten($primary, 40%);
 $accordion-button-color:                     $dark;
 // $accordion-button-bg:                     var(--#{$prefix}accordion-bg) ;
 // $accordion-transition:                    $btn-transition, border-radius .15s ease ;
-$accordion-button-active-bg:                 lighten($primary, 20%);
+$accordion-button-active-bg:                 lighten($light, 20%);
 $accordion-button-active-color:              $dark; 
 
 // Links

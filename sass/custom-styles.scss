@@ -45,7 +45,11 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
- 
+ font-weight: bold;
+ &.wp-block-heading {
+   font-weight: bold;
+   margin-top:20px !important;
+ }
 }
 body.home {
  
@@ -70,11 +74,12 @@ h1,h2 {
  
 }
 h1 {
-
+  font-size: 2em;
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 9px;
+  margin-top: 20px;;
 }
 h3 {
   margin-bottom: 6px;
@@ -90,7 +95,12 @@ hr {
 }
 
 
+ul {
+  margin-left: 40px;
+  li {
 
+  }
+}
 
 main {
   h1, h2, h3, h4, h5, h6 {
@@ -102,6 +112,7 @@ main {
 
 .header-cont {
   border-top: 15px solid $secondary;
+  padding-bottom: 8px;
 }
 nav {
   position: relative;
