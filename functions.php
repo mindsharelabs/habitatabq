@@ -78,7 +78,7 @@ function mind_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Footer Widgets',
 		'id'            => 'footer_widgets',
-		'before_widget' => '<div class="widget-item col-12 col-md-4">',
+		'before_widget' => '<div class="widget-item col-12 col-md-4 col-lg-3">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
