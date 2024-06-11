@@ -29,7 +29,7 @@ function add_specific_menu_location_atts( $atts, $item, $args ) {
             $item->title = '<i class="fa fa-' . $icon . '"></i>';
         } elseif( $type[0] == 'button' ) {
             $button_color = get_field('button_color', $item);
-            $atts['class'] = 'text-white btn btn-' . $button_color;
+            $atts['class'] = 'text-white btn-lg btn btn-' . $button_color;
         }
     }
     
