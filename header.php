@@ -25,6 +25,17 @@
         <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/img/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6K8J3BTZF"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q6K8J3BTZF');
+        </script>
+
+
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
