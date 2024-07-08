@@ -10,7 +10,7 @@ define('THEME_VERSION', '1.2.5');
 \*------------------------------------*/
 
 include get_template_directory() . '/inc/acf-blocks.php';
-
+include get_template_directory() . '/inc/customizer.php';
 
 
 
